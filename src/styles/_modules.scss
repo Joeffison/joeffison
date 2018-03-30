@@ -1,0 +1,12 @@
+.credits li {
+  list-style-type: none;
+
+  div {
+    height: 10vw;
+    width: 10vw;
+    min-width: 100px;
+    min-height: 100px;
+
+    @include border-radius(15%)
+  }
+}

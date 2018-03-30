@@ -1,0 +1,23 @@
+/// Mixin to prefix several properties at once
+/// @param {Map} $declarations - Declarations to prefix
+/// @param {List} $prefixes - List of prefixes to print
+@mixin prefix($declarations, $prefixes: ('webkit', 'moz', 'ms', 'o')) {
+  @each $property, $value in $declarations {
+    // standard declaration first, so it won't be removed on compilation
+    #{$property}: $value;
+
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+  }
+}
+
+@mixin border-radius($radius) {
+  @include prefix((
+    border-radius: $radius
+  ))
+}
+
+@mixin rounded() {
+  @include border-radius(50%);
+}

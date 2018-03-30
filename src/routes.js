@@ -3,13 +3,23 @@ angular
   .config(routesConfig);
 
 /** @ngInject */
-function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
+function routesConfig($stateProvider, $urlRouterProvider, $locationProvider, $transitionsProvider) {
   $locationProvider.html5Mode(true).hashPrefix('!');
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-    .state('app', {
+    .state('home', {
       url: '/',
-      component: 'app'
+      templateUrl: 'app/controllers/home/home.html',
+      controller: 'HomeController',
+      controllerAs: 'vm'
+    });
+
+  $stateProvider
+    .state('credits', {
+      url: '/credits/',
+      templateUrl: 'app/controllers/credits/credits.html',
+      controller: 'CreditsController',
+      controllerAs: 'vm'
     });
 }
