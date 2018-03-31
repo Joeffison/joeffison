@@ -1,0 +1,18 @@
+/* Susy */
+$grid-template-columns: repeat(12, 7.5rem);
+$columns: susy-repeat(12, 7.5rem);
+
+$susy: (
+  'columns': susy-repeat(12, 7.5rem),
+  'gutters': 0.1,
+  'spread': 'narrow',
+  'container-spread': 'narrow',
+);
+
+// fix the browser box-model by setting a global box-sizing:
+* {
+  box-sizing: border-box;
+  --span: initial; /* avoid inheritance */
+  --percentage: calc(var(--span) * 100%);
+  width: var(--percentage, initial);
+}

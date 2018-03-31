@@ -28,3 +28,15 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
+
+@mixin flag($country) {
+  @include image("../assets/images/vectors/flags/#{$country}.svg");
+  @include rounded();
+  height: $experience-circle-size;
+  width: $experience-circle-size;
+  min-height: $experience-circle-size;
+  min-width: $experience-circle-size;
+  //margin: 0 auto;
+  margin-bottom: 1rem;
+  display: block;
+}

@@ -1,3 +1,116 @@
+/* Experience Page */
+
+.lined {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  position: relative;
+
+  li { /* each experience item */
+    list-style-type: none;
+    width: span(12);
+    margin-bottom: 1rem;
+
+    .centered {
+      width: span(2);
+      display: inline-block;
+
+      &:hover div::before {
+        transform: scale(1.1);
+        opacity: 1;
+        transition: .3s opacity ease-in-out, .3s transform ease-in-out;
+        position: absolute;
+        width: $experience-circle-size;
+        height: $experience-circle-size;
+        z-index: -1;
+        content: ' ';
+        box-sizing: border-box;
+        display: block;
+        background: #FFF;
+        border: .2vw solid darken($primary-color, 10);
+        border-radius: 100%;
+      }
+    }
+
+    article {
+      width: span(5 wide);
+      min-width: span(5 wide);
+      max-width: span(5 wide);
+    }
+
+    &:nth-of-type(odd){
+     //background: susy-svg-grid() no-repeat scroll;
+
+     .centered {
+       margin-left: span(5 wide);
+       //background: susy-svg-grid($colors: (blue)) no-repeat scroll;
+     }
+
+      article {
+        float: right;
+      }
+    }
+
+    &:nth-of-type(even){
+      article {
+        float: left;
+      }
+    }
+  }
+
+  &::before { /* horizontally centered vertical line */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 1px;
+    background: #AAA;
+    content: ' ';
+    z-index: -3;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .lined {
+    height: 700px;
+
+    li {
+      .centered div {
+        position: absolute;
+        left: 25%;
+        margin: 0 0 20px -21%;
+        padding: 0;
+      }
+
+      article {
+        clear: both;
+        min-width: 66.6vw !important;
+        display: inline-block;
+        margin-top: -10%;
+        padding-left: 5px;
+        margin-bottom: 10%;
+        float: right !important;
+        h1, p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    &::before { /* left vertical line */
+      left: 10%;
+    }
+  }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  .lined h1, .lined p {
+    font-size: 1rem;
+  }
+}
+
+
+/* Credits Page */
+
 .credits li {
   list-style-type: none;
 
@@ -8,5 +121,32 @@
     min-height: 100px;
 
     @include border-radius(15%)
+  }
+}
+
+.art-reference {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding:2px 3px;
+  font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.2;
+  display: inline-block;
+  @include border-radius(3px);
+
+  span {
+    display:inline-block;
+    padding: 0; /* 2px 3px; */
+
+    svg {
+      height:12px;
+      width:auto;
+      position:relative;
+      vertical-align:middle;
+      top:-1px;
+      fill:white;
+    }
   }
 }

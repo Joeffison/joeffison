@@ -1,4 +1,24 @@
+/* Color Palettes */
+$beach-primary: #588c7e;
+$beach-secondary: #f2e394;
+$beach-tertiary: #f2ae72;
+$beach-quaternary: #d96459;
+
+$shell-primary: #c1946a;
+$shell-secondary: #405d27;
+$shell-tertiary: #82b74b;
+$shell-quaternary: #3e4444;
+
+/* Color Variables */
+$primary-color: $beach-primary;
+$secondary-color: $beach-secondary;
+$tertiary-color: $beach-tertiary;
+$quaternary-color: $beach-quaternary;
+
 $header-color: white;
+$footer-color: black;
+
 $header-height: 19.53125vw;
 
-$footer-color: black;
+/* Dimensions Variables */
+$experience-circle-size: 10vw;
