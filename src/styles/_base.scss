@@ -9,10 +9,7 @@ body {
 }
 
 .header {
-  background-image: url("../assets/images/large/header.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  @include image("../assets/images/large/header.jpg");
 }
 
 /* The animation code */
@@ -52,7 +49,25 @@ header {
     @include prefix((
       animation-name: header-animation,
       animation-duration: 10s
-    ))
+    ));
+  }
+
+
+}
+.profile-picture {
+  @include image("../assets/images/large/profile.jpg");
+  width: 13vw; //120px;
+  height: 13vw; //120px;
+  min-width: 73.5938px;
+  min-height: 73.5938px;
+  @include rounded();
+  @include prefix((
+    transform: translate(0%,-50%)
+  ));
+  margin: 0 auto;
+  border: white solid 4px;
+  @media only screen and (max-width: 780px) {
+    border-width: 2px;
   }
 }
 

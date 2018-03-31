@@ -21,3 +21,10 @@
 @mixin rounded() {
   @include border-radius(50%);
 }
+
+@mixin image($img) {
+  background-image: url($img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
