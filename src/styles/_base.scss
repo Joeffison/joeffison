@@ -6,10 +6,11 @@ body {
   min-width: 100%;
   width: 100%;
   margin: 0;
+  background-color: $main-background-color;
 }
 
 .header {
-  @include image("../assets/images/large/header.jpg");
+  //@include image("../assets/images/large/header.jpg");
 }
 
 /* The animation code */
@@ -35,16 +36,17 @@ body {
 }
 
 header {
-  height: $header-height; /* 200px */
+  height: $header-height;
+  min-height: 38px;
   color: black;
   background-color: $header-color;
-  background-image: url("../assets/images/large/header.jpg");
 
   .brand {
     font-family: 'Pacifico', cursive;
     font-size: 4.5vw;;
-    line-height: $header-height * 0.7;
+    line-height: $header-height;
     float: left;
+    color: lighten($quaternary-color, 100);
 
     @include prefix((
       animation-name: header-animation,

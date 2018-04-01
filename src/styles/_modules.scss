@@ -9,7 +9,9 @@
   li { /* each experience item */
     list-style-type: none;
     width: span(12);
-    margin-bottom: 1rem;
+    //margin-bottom: 3rem;
+    overflow-y: hidden;
+    min-height: $experience-circle-size * 1.1;
 
     .centered {
       width: span(2);
@@ -36,6 +38,14 @@
       width: span(5 wide);
       min-width: span(5 wide);
       max-width: span(5 wide);
+      background-color: $primary-color;
+      @include border-radius(20px);
+      padding-left: 5px;
+      color: $secondary-color;
+
+      h1 {
+        color: darken($secondary-color, 15);
+      }
     }
 
     &:nth-of-type(odd){

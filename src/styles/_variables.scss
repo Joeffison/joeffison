@@ -15,10 +15,11 @@ $secondary-color: $beach-secondary;
 $tertiary-color: $beach-tertiary;
 $quaternary-color: $beach-quaternary;
 
-$header-color: white;
+$main-background-color: lighten($secondary-color, 10);
+$header-color: darken($primary-color, 10);
 $footer-color: black;
 
-$header-height: 19.53125vw;
+$header-height: 7.53125vw;  /* 19.53125vw ~ 200px with image*/
 
 /* Dimensions Variables */
 $experience-circle-size: 10vw;
