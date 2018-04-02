@@ -6,7 +6,7 @@ body {
   min-width: 100%;
   width: 100%;
   margin: 0;
-  background-color: $main-background-color;
+  background-color: $main-color;
 }
 
 .header {
@@ -46,7 +46,7 @@ header {
     font-size: 4.5vw;;
     line-height: $header-height;
     float: left;
-    color: lighten($quaternary-color, 100);
+    color: $header-text-color;
 
     @include prefix((
       animation-name: header-animation,

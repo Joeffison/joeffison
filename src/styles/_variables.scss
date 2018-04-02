@@ -10,14 +10,19 @@ $shell-tertiary: #82b74b;
 $shell-quaternary: #3e4444;
 
 /* Color Variables */
-$primary-color: $beach-primary;
-$secondary-color: $beach-secondary;
-$tertiary-color: $beach-tertiary;
-$quaternary-color: $beach-quaternary;
+$primary-color: darken($shell-quaternary, 10);;
+$secondary-color: $shell-tertiary;
+$tertiary-color: $shell-secondary;
+$quaternary-color: $shell-primary;
 
-$main-background-color: lighten($secondary-color, 10);
-$header-color: darken($primary-color, 10);
-$footer-color: black;
+$header-color: $primary-color;
+$header-text-color: $secondary-color;
+$main-color: lighten(white, 30);
+$main-text-color: lighten($secondary-color, 25);
+$footer-color: $header-color;
+$footer-text-color: $header-text-color;
+$box-color: $primary-color;
+$box-text-color: $secondary-color;
 
 $header-height: 7.53125vw;  /* 19.53125vw ~ 200px with image*/
 

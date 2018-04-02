@@ -29,7 +29,7 @@
         box-sizing: border-box;
         display: block;
         background: #FFF;
-        border: .2vw solid darken($primary-color, 10);
+        border: .2vw solid $tertiary-color;
         border-radius: 100%;
       }
     }
@@ -38,13 +38,13 @@
       width: span(5 wide);
       min-width: span(5 wide);
       max-width: span(5 wide);
-      background-color: $primary-color;
+      background-color: $box-color;
       @include border-radius(20px);
       padding-left: 5px;
-      color: $secondary-color;
+      color: $box-text-color;
 
       h1 {
-        color: darken($secondary-color, 15);
+        color: $box-text-color;
       }
     }
 
@@ -100,8 +100,11 @@
         padding-left: 5px;
         margin-bottom: 10%;
         float: right !important;
+        background-color: unset;
+        color: unset;
         h1, p {
           font-size: 1rem;
+          color: unset;
         }
       }
     }
