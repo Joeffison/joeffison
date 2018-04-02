@@ -12,7 +12,7 @@
   }
 }
 
-@mixin border-radius($radius) {
+@mixin border-radius($radius: 20px) {
   @include prefix((
     border-radius: $radius
   ))

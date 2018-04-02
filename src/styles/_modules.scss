@@ -3,9 +3,6 @@
 .biography {
   font-size: 1.3rem;
   margin-bottom: 7rem;
-  h1 {
-
-  }
 }
 
 /* Experience Page */
@@ -158,9 +155,36 @@
   }
 }
 
+/* Work Page */
+.work-experience {
+  font-size: 1.3rem;
+  margin-bottom: 7rem;
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  section {
+  }
+
+  .team-picture {
+    height: 60vw;
+    width: 82vw;
+    max-height:546.391px;
+    max-width:746.734px;
+    @include border-radius();
+    margin: 0 auto;
+  }
+}
+
+#work-virtus {
+  .team-picture {
+    @include image("../assets/images/large/team-virtus.jpg");
+  }
+}
 
 /* Credits Page */
-
 .credits li {
   list-style-type: none;
 

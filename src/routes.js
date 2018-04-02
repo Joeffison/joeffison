@@ -16,6 +16,14 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider, $tr
     });
 
   $stateProvider
+    .state('virtus', {
+      url: '/work/virtus/',
+      templateUrl: 'app/controllers/virtus/virtus.html',
+      controller: 'VirtusController',
+      controllerAs: 'vm'
+    });
+
+  $stateProvider
     .state('credits', {
       url: '/credits/',
       templateUrl: 'app/controllers/credits/credits.html',
