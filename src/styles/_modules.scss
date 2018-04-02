@@ -78,6 +78,31 @@
     content: ' ';
     z-index: -3;
   }
+
+  #work-petitcode div div:hover {
+    background-image: url("../assets/images/large/petitcode.png");
+  }
+
+  #work-virtus div div:hover {
+    background-image: url("../assets/images/large/virtus.jpg");
+  }
+
+  #bachelor-ufcg div div:hover {
+    background-image: url("../assets/images/vectors/ufcg.svg");
+    background-size: contain;
+  }
+
+  #research-tud div div:hover {
+    background-image: url("../assets/images/vectors/tu_dresden.svg");
+  }
+
+  #research-lsd div div:hover {
+    background-image: url("../assets/images/large/lsd.png");
+  }
+
+  #research-splab div div:hover {
+    background-image: url("../assets/images/large/splab.png");
+  }
 }
 
 @media only screen and (max-width: 425px) {
