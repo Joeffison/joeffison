@@ -1,13 +1,17 @@
 /// Mixin to prefix several properties at once
 /// @param {Map} $declarations - Declarations to prefix
 /// @param {List} $prefixes - List of prefixes to print
-@mixin prefix($declarations, $prefixes: ('webkit', 'moz', 'ms', 'o')) {
+/// The standard declaration goes first, so it won't be removed on compilation
+@mixin prefix($declarations, $prefixes: ('', 'webkit', 'moz', 'ms', 'o')) {
   @each $property, $value in $declarations {
-    // standard declaration first, so it won't be removed on compilation
-    #{$property}: $value;
+    @if('' in $prefixes) {
+      #{$property}: $value;
+    }
 
     @each $prefix in $prefixes {
-      #{'-' + $prefix + '-' + $property}: $value;
+      @if($prefix != '') {
+        #{'-' + $prefix + '-' + $property}: $value;
+      }
     }
   }
 }

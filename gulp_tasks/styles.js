@@ -3,6 +3,8 @@ const browserSync = require('browser-sync');
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
+
+// This plugin also removes the support prefixes for the least utilized old browsers
 const autoprefixer = require('autoprefixer');
 
 const conf = require('../conf/gulp.conf');
