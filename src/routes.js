@@ -25,10 +25,26 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider, $tr
     });
 
   $stateProvider
+    .state('petitcode', {
+      url: '/work/petitcode',
+      templateUrl: 'app/controllers/petitcode/petitCode.html',
+      controller: 'PetitCodeController',
+      controllerAs: 'vm'
+    });
+
+  $stateProvider
     .state('virtus', {
       url: '/work/virtus',
       templateUrl: 'app/controllers/virtus/virtus.html',
       controller: 'VirtusController',
+      controllerAs: 'vm'
+    });
+
+  $stateProvider
+    .state('contact', {
+      url: '/contact',
+      templateUrl: 'app/controllers/contact/contact.html',
+      controller: 'ContactController',
       controllerAs: 'vm'
     });
 

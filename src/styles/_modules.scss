@@ -187,6 +187,15 @@
   }
 }
 
+#work-petitcode {
+  .team-picture {
+    @include image("../assets/images/large/team-petitcode.png");
+  }
+}
+
+a:-webkit-any-link {
+}
+
 /* Credits Page */
 .credits li {
   list-style-type: none;
