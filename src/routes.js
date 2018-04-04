@@ -7,6 +7,15 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider, $tr
   $locationProvider.html5Mode(true).hashPrefix('!');
   $urlRouterProvider.otherwise('/');
 
+  $urlRouterProvider.rule(($injector, $location) => {
+    const path = $location.path();
+
+    if (path[path.length - 1] === '/') {
+      // if last character is a slash, return the same url without the slash
+      return path.substr(0, path.length - 1);
+    }
+  });
+
   $stateProvider
     .state('home', {
       url: '/',
@@ -16,16 +25,32 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider, $tr
     });
 
   $stateProvider
+    .state('petitcode', {
+      url: '/work/petitcode',
+      templateUrl: 'app/controllers/petitcode/petitCode.html',
+      controller: 'PetitCodeController',
+      controllerAs: 'vm'
+    });
+
+  $stateProvider
     .state('virtus', {
-      url: '/work/virtus/',
+      url: '/work/virtus',
       templateUrl: 'app/controllers/virtus/virtus.html',
       controller: 'VirtusController',
       controllerAs: 'vm'
     });
 
   $stateProvider
+    .state('contact', {
+      url: '/contact',
+      templateUrl: 'app/controllers/contact/contact.html',
+      controller: 'ContactController',
+      controllerAs: 'vm'
+    });
+
+  $stateProvider
     .state('credits', {
-      url: '/credits/',
+      url: '/credits',
       templateUrl: 'app/controllers/credits/credits.html',
       controller: 'CreditsController',
       controllerAs: 'vm'

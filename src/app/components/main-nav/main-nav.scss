@@ -1,0 +1,49 @@
+nav.main-nav {
+  position: sticky !important;
+  top: 0;
+  z-index: 1000 !important;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: $primary-color;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      float: left;
+
+      &.right {
+        float: right;
+      }
+
+      a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+
+        &:hover:not(.active) {
+          background-color: lighten($primary-color, 20);
+        }
+
+        &.active {
+          background-color: $quaternary-color;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+  nav.main-nav {
+    position: relative !important;
+
+    ul li.right, ul li {
+      float: none;
+    }
+  }
+}
