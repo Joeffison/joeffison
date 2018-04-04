@@ -28,3 +28,9 @@ $header-height: 7.53125vw;  /* 19.53125vw ~ 200px with image*/
 
 /* Dimensions Variables */
 $experience-circle-size: 10vw;
+
+/* Media Queries */
+$query-phone: "only screen and (max-width: 375px)"; /* iPhone X: 375x812 */
+$query-tablet: "only screen and (min-width: 376px) and (max-width : 768px)";
+$query-laptop: "only screen and (min-width : 769px)";
+
