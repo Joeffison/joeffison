@@ -15,24 +15,24 @@ body {
 
 /* The animation code */
 @-webkit-keyframes header-animation {
-    from {margin-left: -34%;}
-    to {margin-left: 0;}
+  from {margin-left: -34%;}
+  to {margin-left: 0;}
 }
 @-moz-keyframes header-animation {
-    from {margin-left: -34%;}
-    to {margin-left: 0;}
+  from {margin-left: -34%;}
+  to {margin-left: 0;}
 }
 @-ms-keyframes header-animation {
-    from {margin-left: -34%;}
-    to {margin-left: 0;}
+  from {margin-left: -34%;}
+  to {margin-left: 0;}
 }
 @-o-keyframes header-animation {
-    from {margin-left: -34%;}
-    to {margin-left: 0;}
+  from {margin-left: -34%;}
+  to {margin-left: 0;}
 }
 @keyframes header-animation {
-    from {margin-left: -34%;}
-    to {margin-left: 0;}
+  from {margin-left: -34%;}
+  to {margin-left: 0;}
 }
 
 header {
@@ -89,4 +89,10 @@ footer {
 
 .centered div {
   margin: 0 auto;
+}
+
+@media #{$query-laptop} {
+  html {
+    font-size: 24px;
+  }
 }
