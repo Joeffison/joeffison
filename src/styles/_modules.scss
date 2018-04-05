@@ -192,6 +192,48 @@
   }
 }
 
+#realtimepco {
+  height: 40vw;
+  width: 35.95vw;
+  @include image("../assets/images/large/splab/realtimepco.png");
+  display: inline-block;
+}
+
+#realtimepco-diagram {
+  height: 41.5vw;
+  width: 43.1vw;
+  @include image("../assets/images/large/splab/realtimepco_diagram.png");
+  display: inline-block;
+}
+
+.sparkday-2017-1 {
+  height: 28.5vw;
+  width: 42vw;
+  max-height:546.391px;
+  max-width:746.734px;
+  @include image("../assets/images/large/team-hp.png");
+  display: inline-block;
+}
+
+.sparkday-2017-2 {
+  width: 30vw;
+  height: 44vw;
+  max-height:546.391px;
+  max-width:746.734px;
+  @include image("../assets/images/large/team-hp2.png");
+  display: inline-block;
+}
+
+.team-picture-flisol {
+  height: 60vw;
+  width: 82vw;
+  max-height:546.391px;
+  max-width:746.734px;
+  @include border-radius();
+  margin: 0 auto;
+  @include image("../assets/images/large/team-2015_flisol.jpg");
+}
+
 a:-webkit-any-link {
 }
 
