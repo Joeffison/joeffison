@@ -41,6 +41,38 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider, $tr
     });
 
   $stateProvider
+    .state('ufcg', {
+      url: '/bachelor/ufcg',
+      templateUrl: 'app/controllers/ufcg/ufcg.html',
+      controller: 'UfcgController',
+      controllerAs: 'vm'
+    });
+
+  $stateProvider
+    .state('tud', {
+      url: '/research/tud',
+      templateUrl: 'app/controllers/tud/tud.html',
+      controller: 'TudController',
+      controllerAs: 'vm'
+    });
+
+  $stateProvider
+    .state('lsd', {
+      url: '/research/lsd',
+      templateUrl: 'app/controllers/lsd/lsd.html',
+      controller: 'LsdController',
+      controllerAs: 'vm'
+    });
+
+  $stateProvider
+    .state('splab', {
+      url: '/research/splab',
+      templateUrl: 'app/controllers/splab/splab.html',
+      controller: 'SplabController',
+      controllerAs: 'vm'
+    });
+
+  $stateProvider
     .state('contact', {
       url: '/contact',
       templateUrl: 'app/controllers/contact/contact.html',
