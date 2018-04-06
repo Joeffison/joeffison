@@ -26,7 +26,8 @@
       width: span(2);
       display: inline-block;
 
-      &:hover div::before {
+      &:hover div::before,
+      &:active div::before {
         transform: scale(1.1);
         opacity: 1;
         transition: .3s opacity ease-in-out, .3s transform ease-in-out;
