@@ -2,15 +2,24 @@
 /// @param {Map} $declarations - Declarations to prefix
 /// @param {List} $prefixes - List of prefixes to print
 /// The standard declaration goes first, so it won't be removed on compilation
+$prefixed_values: ('position');
 @mixin prefix($declarations, $prefixes: ('', 'webkit', 'moz', 'ms', 'o')) {
   @each $property, $value in $declarations {
     @if('' in $prefixes) {
       #{$property}: $value;
     }
 
-    @each $prefix in $prefixes {
-      @if($prefix != '') {
-        #{'-' + $prefix + '-' + $property}: $value;
+    @if(index($prefixed_values, $property) != null) {
+      @each $prefix in $prefixes {
+        @if($prefix != '') {
+          $property: #{'-' + $prefix + '-' + $value};
+        }
+      }
+    } @else {
+      @each $prefix in $prefixes {
+        @if($prefix != '') {
+          #{'-' + $prefix + '-' + $property}: $value;
+        }
       }
     }
   }
