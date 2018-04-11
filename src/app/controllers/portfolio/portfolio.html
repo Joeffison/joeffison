@@ -10,8 +10,9 @@
   <ul id="portfolio-list" class="portfolio-list">
     <li ng-repeat="work in vm.portfolio">
       <h2>{{work.name}}</h2>
-      <div id="{{work.thumbnail}}"></div>
-      <p>{{work.description}}</p>
+      <div ng-if="work.thumbnail" id="{{work.thumbnail}}"
+           class="article-image"></div>
+      <p ng-if="work.description">{{work.description}}</p>
 
       <a ng-if="work.link" target="_blank"
          ng-href="{{work.link}}">
