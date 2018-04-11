@@ -1,0 +1,32 @@
+#portfolio-my-website {
+  @include image("../assets/images/large/portfolio/my-website.png");
+}
+
+#portfolio-machine-learning-builder {
+  @include image("../assets/images/large/portfolio/machine-learning-builder.png");
+}
+
+#portfolio-instagram-utility {
+  @include image("../assets/images/large/portfolio/instagram-utility.png");
+}
+
+.portfolio-list {
+  list-style: none;
+  margin-bottom: 5vw;
+
+  h2 {
+    color: $tertiary-color;
+  }
+
+  li > div:nth-of-type(1) {
+    border: 1px solid $primary-color;
+  }
+
+  li {
+    margin-bottom: 100px;
+  }
+
+  a {
+    margin-right: 7px;
+  }
+}

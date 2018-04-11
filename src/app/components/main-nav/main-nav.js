@@ -7,7 +7,7 @@ angular
 
 function MainNav($document) {
   $document.ready(() => {
-    angular.element($document.querySelectorAll('li.dropdown')).on('click', event => {
+    angular.element(document.querySelectorAll('li.dropdown')).on('click', event => {
       event.preventDefault();
       angular.element(event.target.parentElement).toggleClass('active');
       event.stopPropagation();
@@ -21,6 +21,6 @@ function MainNav($document) {
   });
 
   function closeAllNavMenus() {
-    angular.element($document.querySelectorAll('li.dropdown')).removeClass('active');
+    angular.element(document.querySelectorAll('li.dropdown')).removeClass('active');
   }
 }

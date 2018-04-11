@@ -1,5 +1,6 @@
 @import "../app/components/post-it/post-it";
 @import "../app/components/main-nav/main-nav";
+@import "../app/controllers/portfolio/portfolio";
 
 /* Biography Page */
 
@@ -158,6 +159,15 @@
   }
 }
 
+.article-image {
+  height: 60vw;
+  width: 82vw;
+  max-height:546.391px;
+  max-width:746.734px;
+  @include border-radius();
+  margin: 0 auto;
+}
+
 /* Work Page */
 .work-experience {
   font-size: 1rem;
@@ -172,12 +182,7 @@
   }
 
   .team-picture {
-    height: 60vw;
-    width: 82vw;
-    max-height:546.391px;
-    max-width:746.734px;
-    @include border-radius();
-    margin: 0 auto;
+    @extend .article-image;
   }
 }
 
