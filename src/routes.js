@@ -73,6 +73,14 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider, $tr
     });
 
   $stateProvider
+    .state('portfolio', {
+      url: '/portfolio',
+      templateUrl: 'app/controllers/portfolio/portfolio.html',
+      controller: 'PortfolioController',
+      controllerAs: 'vm'
+    });
+
+  $stateProvider
     .state('contact', {
       url: '/contact',
       templateUrl: 'app/controllers/contact/contact.html',

@@ -1,0 +1,26 @@
+#portfolio-machine-learning-builder {
+  height: 60vw;
+  width: 82vw;
+  max-height:546.391px;
+  max-width:746.734px;
+  @include border-radius();
+  margin: 0 auto;
+  @include image("../assets/images/large/portfolio/machine-learning-builder.png");
+}
+
+.portfolio-list {
+  list-style: none;
+  margin-bottom: 5vw;
+
+  h2 {
+    color: $tertiary-color;
+  }
+
+  li > div:nth-of-type(1) {
+    border: 1px solid $primary-color;
+  }
+
+  a {
+    margin-right: 7px;
+  }
+}

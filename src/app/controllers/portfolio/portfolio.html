@@ -1,0 +1,42 @@
+<article class="page-portfolio" id="page-portfolio"><div class="container">
+  <h1>Portfolio 2018</h1>
+  <section class="portfolio-intro">
+    <p>
+      The portfolio below represents the public work I have done in 2018.
+      It is important for you to understand that all my work during 3 years is not public due to my contract at Virtus.
+    </p>
+  </section>
+
+  <ul id="portfolio-list" class="portfolio-list">
+    <li ng-repeat="work in vm.portfolio">
+      <h2>{{work.name}}</h2>
+      <div id="{{work.thumbnail}}"></div>
+      <p>{{work.description}}</p>
+
+      <a ng-if="work.link" target="_blank"
+         ng-href="{{work.link}}">
+        <div class="icon">
+          <i class="fab fa-linux"></i>
+        </div>
+        Website
+      </a>
+
+      <a ng-if="work.readme" target="_blank"
+         ng-href="{{work.readme}}">
+        <div class="icon">
+          <i class="fas fa-book"></i>
+        </div>
+        README.md
+      </a>
+
+      <a ng-if="work.repository" target="_blank"
+         ng-href="{{work.repository}}">
+        <div class="icon">
+          <i class="fab fa-github"></i>
+        </div>
+        Repository
+      </a>
+    </li>
+  </ul>
+
+</div></article>
