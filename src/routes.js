@@ -81,6 +81,14 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider, $tr
     });
 
   $stateProvider
+    .state('personal_interests', {
+      url: '/personal_interests',
+      templateUrl: 'app/controllers/personal/interests.html',
+      controller: 'PersonalInterestsController',
+      controllerAs: 'vm'
+    });
+
+  $stateProvider
     .state('contact', {
       url: '/contact',
       templateUrl: 'app/controllers/contact/contact.html',

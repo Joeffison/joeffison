@@ -53,9 +53,8 @@ header {
       animation-duration: 10s
     ));
   }
-
-
 }
+
 .profile-picture {
   @include image("../assets/images/large/profile.jpg");
   width: 13vw; //120px;
