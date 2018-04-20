@@ -47,6 +47,7 @@ header {
     line-height: $header-height;
     float: left;
     color: $header-text-color;
+    text-decoration: none;
 
     @include prefix((
       animation-name: header-animation,
