@@ -47,6 +47,7 @@ header {
     line-height: $header-height;
     float: left;
     color: $header-text-color;
+    text-decoration: none;
 
     @include prefix((
       animation-name: header-animation,
@@ -94,4 +95,9 @@ footer {
   html {
     font-size: 24px;
   }
+}
+
+li .icon {
+  float: left;
+  margin-right: 3px;
 }

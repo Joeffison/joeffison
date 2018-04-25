@@ -167,6 +167,10 @@
   max-width:746.734px;
   @include border-radius();
   margin: 0 auto;
+
+  &:hover {
+    box-shadow: 5px 12px 20px rgba(36, 37, 38, 0.13);
+  }
 }
 
 /* Work Page */
